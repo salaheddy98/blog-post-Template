@@ -107,7 +107,7 @@ body{
 #showcase{	
 	grid-area: showcase;	
 	height: 250px;			
-	background-image: url('mm2 .jpeg');	
+	background-image: url('mm .jpeg');	
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;		
