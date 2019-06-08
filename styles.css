@@ -1,0 +1,325 @@
+/* ******************* Index Style ********************/
+/* Generale styles**** */
+*{
+	transition: all 1s ease;	
+}
+body{
+	margin: 0;
+	padding: 0;	
+	font-size: 1em;
+	font-family: "Libre Franklin", sans-serif;
+	font-weight:100;
+	background-color: #fff;
+}
+.article-holder{
+ 	text-align: center;
+ 	padding: 0;
+ 	min-width: 50px;  	
+ }
+ .article-holder img{
+	width: 100%;
+	height: auto;	
+	animation: glowing 3s infinite;
+}
+.article-holder img:hover{
+	animation: scale-img 0.5s forwards;
+}
+.article-holder h4{
+	color: #01A75D;
+	margin:1% 0 15% 0;
+}
+.article-holder a{
+	text-decoration: none;
+}
+/* Setting the layout*/
+#container{
+	width: 90%;	
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	grid-template-rows: repeat(4, minmax(50px, auto));	
+	grid-template-areas:
+	"header header header header header header "
+	"showcase showcase showcase showcase showcase showcase "
+	"main main main main sidebar sidebar "
+	"footer footer footer footer footer footer "
+	;
+}
+/*  styling each section*/
+/* ******* header*/
+#header{	
+	background: #01A75D;
+	grid-area: header;	
+}
+#header .nav-bar{	
+	width: 45%;
+	height: auto;
+	background: #01A75D;	
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-shadow: 0px 5px 10px #00371F;	
+	z-index: 99999;
+}
+#header .nav-bar nav{			
+	text-align: center;
+	margin-top:15px;
+}
+#header .nav-bar nav ul{
+	margin-top: 0;
+}
+#header .nav-bar nav li{
+	display: inline-block;
+	list-style: none;	
+	text-transform: uppercase;
+}
+#header .nav-bar nav li a{
+	text-decoration: none;	
+	color: #fff;
+	background: #01A75D;
+	padding: 10px;
+	border-radius: 5px;
+}
+#header .nav-bar nav li a:hover{
+	background: #00371F;
+	text-shadow: 2px 2px 3px #CBD6D1;
+}
+#header .nav-bar nav li a:active{
+	background: #00371F;	
+}
+#header .brand{	
+	position: absolute;
+	left: 50px;
+	top: -13px;
+	width: 10%;
+	text-align: center;
+	padding: 0px;
+	cursor: pointer;
+}
+#header .brand span{
+	font-size: 7em;	
+	font-weight: bold;
+	font-family: serif;
+	color: #00371F;
+	text-shadow: 0px 0px 10px #E7E7E7;
+}
+/* ******* showcase*/
+#showcase{	
+	grid-area: showcase;	
+	height: 250px;			
+	background-image: url('mm2 .jpeg');	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;		
+	background-attachment: fixed;	
+}
+#showcase h1 {
+	color: #fff;
+	font-size: 2.6em;
+	position: absolute;
+	top: 140px;
+	left: 200px;
+	text-shadow: 2px 2px 10px #000;	
+	padding: 10px;
+	border-radius: 30px;	
+}
+.publisher-info{
+	background:#fff;
+	border-radius: 10px;
+	position: absolute;
+	top: 182px;
+	right: 50px;
+	width: 200px;	
+	height: 160px;
+	padding: 7px;	
+}
+#showcase .publisher-info img.avatar{
+	width:90px;
+	height: auto;
+	border-radius: 50%;		
+	position: relative;
+	top: 0;
+	left: 25%;
+}
+#showcase .publisher-info p{
+	position: relative;
+	margin:0;	
+}
+.publisher-desc span{
+	display: block;
+}
+/* Main Content******* */
+#main{	
+	grid-area: main;	
+	padding: 5% 10%;
+}
+h2,#main .news-letter p{
+	color: #00371F;
+}
+.more-article::after{
+	content: "";
+    clear: both;
+    display: table;
+}
+.more-article div{
+	width: 30%;
+	margin: 1%;
+	float: left;
+	text-align: center;	
+}
+#main .news-letter{
+	padding: 3%;	
+	background: #CCEEDF;
+	border-radius: 5px;
+	font-weight: bold;	
+	width: 100%;
+	margin: 20px 0;
+}
+#main .news-letter input{
+	width: 60%;
+	padding: 2%;
+	border-radius: 5px;
+	border:1px solid #00371F;
+}
+#main .news-letter button{	
+	padding: 2.3%;
+	border-radius: 5px;
+	border:none;
+	cursor: pointer;
+	background: #01A75D;
+	color:#fff;
+}
+#main .news-letter button:focus{
+	outline: none;
+}
+#main .news-letter input:focus{
+	outline-color:#01A75D;
+}
+#main .news-letter button:hover{
+	background: #00371F;	
+	text-shadow: 1px 1px 2px #CBD6D1;
+	box-shadow: 3px 3px 5px #000;
+}
+#main .news-letter button:active{
+	background: #00371F;
+}
+#main .news-letter input::placeholder{
+	color: #01A75D;
+}
+/* Side bar******* */
+#sidebar{
+	grid-area: sidebar;
+	padding: 10px;
+}
+
+ #sidebar div{ 	
+ 	margin: 5px;
+ 	width: 255px;
+ } 
+ #sidebar h2{
+ 	margin: auto; 
+ }
+ /* i have to change the label of Article in sidebar
+	each 3 seconds, with 
+	(information, knowledge, culture)
+	need to add : back to top button;
+  ******** */
+ /* Footer******* */
+#footer{	
+	grid-area: footer;	
+}
+#footer div{
+	width: 98%;
+	margin:0% auto;	
+}
+#footer .footer-info{
+	background-color: #00371F;
+	color: #E7E7E7;
+	padding: 1%;
+}
+#footer .footer-copy{	
+	text-align: center;
+	padding: 0.5%;
+	border-top:5px solid #01A75D;
+}
+#footer p, #footer ul{
+	margin: 0 auto;	
+}
+
+
+/* Keyframes************/
+
+@keyframes glowing {
+	50%{
+		box-shadow: 0px 0px 10px #01A75D;
+	}	
+}
+@keyframes scale-img {
+	0%{
+		transform: rotate(-10deg);
+	}
+	50%{
+		transform: rotate(10deg);		
+	}
+	100%{
+		transform: scale(1.1);
+		opacity: 0.85;
+		box-shadow: 5px 5px 15px #000;
+	}	
+}
+
+/* ******************* Movies page-style ********************/
+
+.q-container {
+	height: 200px;
+	width: 50%;
+	position: relative;
+	-webkit-perspective: 700;
+	float: left;
+	margin-right: 2%;
+}
+.film {
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 1s;
+}
+.film img{
+	width: 100%;
+	height: auto;
+}
+.q-container:hover .film {
+	-webkit-transform: rotateY(180deg);	
+}
+.face {
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+}
+.back {
+	width: 66%;
+	height: 127%;
+	-webkit-transform: rotateY(180deg);
+	background: #3b3b3b;
+	background: -webkit-linear-gradient(top, rgba(200,200,200,1) 0%, rgba(200,200,200,0) 100%);
+	padding: 15%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
